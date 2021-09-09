@@ -1,4 +1,4 @@
-package com.example.Carlist;
+package com.example.CarList;
 
 import org.springframework.web.bind.annotation.*;
 
@@ -9,26 +9,30 @@ import java.util.List;
 @RequestMapping("/api")
 public class CarApi {
 
-    private List<Car> carlist;
+    private List<Car> carList;
 
     public CarApi() {
-        this.car = new ArrayList<>();
+        this.carList = new ArrayList<>();
     }
 
     @GetMapping("/{mark}")
-    public Car getCars(@PathVariable int mark) {
-        return carlist.stream()
-                .filter(car -> car.getMark() == mark).findFirst().get();
+    public Car getMark(@PathVariable int mark) {
+        return carList.stream()
+                .filter(Car -> Car.getMark() == mark).findFirst().get();
     }
 
     @GetMapping("/")
-    public List<Car> getCars) {
+    public List<Car> getCars() {
         return carList;
     }
 
     @PostMapping("/add")
     public boolean addCar(@RequestBody Car car) {
-        return CarList.add(car);
+        return carList.add(car);
     }
 
 }
+
+
+    
+

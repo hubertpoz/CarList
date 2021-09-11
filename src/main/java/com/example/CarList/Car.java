@@ -6,18 +6,16 @@ import io.swagger.annotations.ApiModelProperty;
 @ApiModel("Company data of Cars")
 public class Car {
     @ApiModelProperty("unique mark of cars")
-    private int mark;
+    private int yearOfProduction;
     private String model;
-    private String yearOfProduction;
+    private String mark;
 
     //TODO example of todo message
-    public int getMark() {
-        return mark;
+    public int getYearoFProduction() {
+        return yearOfProduction;
     }
 
-    public void setMark(int mark) {
-        this.mark = mark;
-    }
+    public void setMark(int yearOfProduction) {this.yearOfProduction = yearOfProduction;}
 
     public String getModel() {
         return model;
@@ -27,12 +25,12 @@ public class Car {
         this.model = model;
     }
 
-    public String getYearOfProduction() {
-        return yearOfProduction;
+    public String getMark() {
+        return mark;
     }
 
-    public void setYearOfProduction(String yearOfProduction) {
-        this.yearOfProduction = yearOfProduction;
+    public void setMark(String mark) {
+        this.mark = mark;
     }
 
     @Override

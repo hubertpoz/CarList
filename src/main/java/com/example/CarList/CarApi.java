@@ -16,9 +16,9 @@ public class CarApi {
     }
 
     @GetMapping("/{mark}")
-    public Car getMark(@PathVariable int mark) {
+    public Car getYearOfProduction(@PathVariable int yearOfProduction) {
         return carList.stream()
-                .filter(Car -> Car.getMark() == mark).findFirst().get();
+                .filter(Car -> Car.getYearoFProduction() == yearOfProduction).findFirst().get();
     }
 
     @GetMapping("/")

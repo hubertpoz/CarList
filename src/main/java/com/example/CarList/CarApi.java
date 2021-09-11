@@ -15,10 +15,10 @@ public class CarApi {
         this.carList = new ArrayList<>();
     }
 
-    @GetMapping("/{mark}")
+    @GetMapping("/{yearOfProduction}")
     public Car getYearOfProduction(@PathVariable int yearOfProduction) {
         return carList.stream()
-                .filter(Car -> Car.getYearoFProduction() == yearOfProduction).findFirst().get();
+                .filter(Car -> Car.getYearOfProduction() == yearOfProduction).findFirst().get();
     }
 
     @GetMapping("/")
